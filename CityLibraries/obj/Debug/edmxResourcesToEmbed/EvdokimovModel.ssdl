@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище СityLibrariesModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "СityLibraries.dbo.ISSUING_LITERATURE" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="ISSUING_LITERATURE">
+    <Key>
+      <PropertyRef Name="ISSUING_LITERATURE_READER" />
+      <PropertyRef Name="ISSUING_LITERATURE_LITERATURE" />
+      <PropertyRef Name="ISSUING_LITERATURE_DATE_OF_ISSUE" />
+      <PropertyRef Name="ISSUING_LITERATURE_TYPE_OF_ISSUANCE" />
+    </Key>
+    <Property Name="ISSUING_LITERATURE_READER" Type="int" Nullable="false" />
+    <Property Name="ISSUING_LITERATURE_LITERATURE" Type="int" Nullable="false" />
+    <Property Name="ISSUING_LITERATURE_DATE_OF_ISSUE" Type="date" Nullable="false" />
+    <Property Name="ISSUING_LITERATURE_ISSUANCE_DATE" Type="date" />
+    <Property Name="ISSUING_LITERATURE_TYPE_OF_ISSUANCE" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="ISSUING_LITERATURE_DEPOSIT" Type="varchar" MaxLength="4" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="LIBRARIES">
+    <Key>
+      <PropertyRef Name="LIBRARY_ID" />
+    </Key>
+    <Property Name="LIBRARY_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LIBRARY_NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LIBRARY_ADDRESS" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LIBRARY_CITY" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LITERATURE">
+    <Key>
+      <PropertyRef Name="LITERATURE_ID" />
+    </Key>
+    <Property Name="LITERATURE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LITERATURE_NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LITERATURE_CATEGORY" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LITERATURE_AUTHOR" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="LITERATURE_PUBLISHER" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="LITERATURE_PUBLISHING_DATE" Type="int" Nullable="false" />
+    <Property Name="LITERATURE_PAGES" Type="int" Nullable="false" />
+    <Property Name="LITERATURE_READING_ROOM" Type="int" />
+  </EntityType>
+  <EntityType Name="READERS">
+    <Key>
+      <PropertyRef Name="READER_ID" />
+    </Key>
+    <Property Name="READER_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="READER_SURNAME" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="READER_NAME" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="READER_PATRONYMIC" Type="nvarchar" MaxLength="100" />
+    <Property Name="READER_CATEGORY" Type="varchar" MaxLength="18" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="READER_WORKING_PLACE" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="READER_BIRTHDAY" Type="date" Nullable="false" />
+    <Property Name="READER_AGE" Type="int" StoreGeneratedPattern="Computed" />
+    <Property Name="READER_REGISTRATION" Type="date" Nullable="false" />
+    <Property Name="READER_PHOTO" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="READING_ROOM">
+    <Key>
+      <PropertyRef Name="READING_ROOM_ID" />
+    </Key>
+    <Property Name="READING_ROOM_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="READING_ROOM_NAME" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="READING_ROOM_LIBRARY" Type="int" Nullable="false" />
+    <Property Name="READING_ROOM_LITERATURE" Type="int" Nullable="false" />
+    <Property Name="READING_ROOM_SEATS" Type="int" Nullable="false" />
+    <Property Name="READING_ROOM_WORK_TIME" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="READING_ROOM_FLOOR" Type="int" />
+    <Property Name="READING_ROOM_WORKERS" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_ISSUING_LITERATURE_LITERATURE">
+    <End Role="LITERATURE" Type="Self.LITERATURE" Multiplicity="1" />
+    <End Role="ISSUING_LITERATURE" Type="Self.ISSUING_LITERATURE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LITERATURE">
+        <PropertyRef Name="LITERATURE_ID" />
+      </Principal>
+      <Dependent Role="ISSUING_LITERATURE">
+        <PropertyRef Name="ISSUING_LITERATURE_LITERATURE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ISSUING_LITERATURE_READERS">
+    <End Role="READERS" Type="Self.READERS" Multiplicity="1" />
+    <End Role="ISSUING_LITERATURE" Type="Self.ISSUING_LITERATURE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="READERS">
+        <PropertyRef Name="READER_ID" />
+      </Principal>
+      <Dependent Role="ISSUING_LITERATURE">
+        <PropertyRef Name="ISSUING_LITERATURE_READER" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LITERATURE_READING_ROOM">
+    <End Role="READING_ROOM" Type="Self.READING_ROOM" Multiplicity="0..1" />
+    <End Role="LITERATURE" Type="Self.LITERATURE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="READING_ROOM">
+        <PropertyRef Name="READING_ROOM_ID" />
+      </Principal>
+      <Dependent Role="LITERATURE">
+        <PropertyRef Name="LITERATURE_READING_ROOM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_READING_ROOM_LIBRARIES">
+    <End Role="LIBRARIES" Type="Self.LIBRARIES" Multiplicity="1" />
+    <End Role="READING_ROOM" Type="Self.READING_ROOM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LIBRARIES">
+        <PropertyRef Name="LIBRARY_ID" />
+      </Principal>
+      <Dependent Role="READING_ROOM">
+        <PropertyRef Name="READING_ROOM_LIBRARY" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище СityLibrariesModelContainer">
+    <EntitySet Name="LIBRARIES" EntityType="Self.LIBRARIES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LITERATURE" EntityType="Self.LITERATURE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="READERS" EntityType="Self.READERS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="READING_ROOM" EntityType="Self.READING_ROOM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ISSUING_LITERATURE" EntityType="Self.ISSUING_LITERATURE" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ISSUING_LITERATURE].[ISSUING_LITERATURE_READER] AS [ISSUING_LITERATURE_READER], 
+    [ISSUING_LITERATURE].[ISSUING_LITERATURE_LITERATURE] AS [ISSUING_LITERATURE_LITERATURE], 
+    [ISSUING_LITERATURE].[ISSUING_LITERATURE_DATE_OF_ISSUE] AS [ISSUING_LITERATURE_DATE_OF_ISSUE], 
+    [ISSUING_LITERATURE].[ISSUING_LITERATURE_ISSUANCE_DATE] AS [ISSUING_LITERATURE_ISSUANCE_DATE], 
+    [ISSUING_LITERATURE].[ISSUING_LITERATURE_TYPE_OF_ISSUANCE] AS [ISSUING_LITERATURE_TYPE_OF_ISSUANCE], 
+    [ISSUING_LITERATURE].[ISSUING_LITERATURE_DEPOSIT] AS [ISSUING_LITERATURE_DEPOSIT]
+    FROM [dbo].[ISSUING_LITERATURE] AS [ISSUING_LITERATURE]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_ISSUING_LITERATURE_LITERATURE" Association="Self.FK_ISSUING_LITERATURE_LITERATURE">
+      <End Role="LITERATURE" EntitySet="LITERATURE" />
+      <End Role="ISSUING_LITERATURE" EntitySet="ISSUING_LITERATURE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ISSUING_LITERATURE_READERS" Association="Self.FK_ISSUING_LITERATURE_READERS">
+      <End Role="READERS" EntitySet="READERS" />
+      <End Role="ISSUING_LITERATURE" EntitySet="ISSUING_LITERATURE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LITERATURE_READING_ROOM" Association="Self.FK_LITERATURE_READING_ROOM">
+      <End Role="READING_ROOM" EntitySet="READING_ROOM" />
+      <End Role="LITERATURE" EntitySet="LITERATURE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_READING_ROOM_LIBRARIES" Association="Self.FK_READING_ROOM_LIBRARIES">
+      <End Role="LIBRARIES" EntitySet="LIBRARIES" />
+      <End Role="READING_ROOM" EntitySet="READING_ROOM" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

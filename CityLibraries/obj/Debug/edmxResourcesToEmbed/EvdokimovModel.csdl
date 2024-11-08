@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="СityLibrariesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="LIBRARIES">
+    <Key>
+      <PropertyRef Name="LIBRARY_ID" />
+    </Key>
+    <Property Name="LIBRARY_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LIBRARY_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LIBRARY_ADDRESS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LIBRARY_CITY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="READING_ROOM" Relationship="Self.FK_READING_ROOM_LIBRARIES" FromRole="LIBRARIES" ToRole="READING_ROOM" />
+  </EntityType>
+  <EntityType Name="LITERATURE">
+    <Key>
+      <PropertyRef Name="LITERATURE_ID" />
+    </Key>
+    <Property Name="LITERATURE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LITERATURE_NAME" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LITERATURE_CATEGORY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LITERATURE_AUTHOR" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LITERATURE_PUBLISHER" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LITERATURE_PUBLISHING_DATE" Type="Int32" Nullable="false" />
+    <Property Name="LITERATURE_PAGES" Type="Int32" Nullable="false" />
+    <Property Name="LITERATURE_READING_ROOM" Type="Int32" />
+    <NavigationProperty Name="ISSUING_LITERATURE" Relationship="Self.FK_ISSUING_LITERATURE_LITERATURE" FromRole="LITERATURE" ToRole="ISSUING_LITERATURE" />
+    <NavigationProperty Name="READING_ROOM" Relationship="Self.FK_LITERATURE_READING_ROOM" FromRole="LITERATURE" ToRole="READING_ROOM" />
+  </EntityType>
+  <EntityType Name="READERS">
+    <Key>
+      <PropertyRef Name="READER_ID" />
+    </Key>
+    <Property Name="READER_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="READER_SURNAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="READER_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="READER_PATRONYMIC" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="READER_CATEGORY" Type="String" MaxLength="18" FixedLength="false" Unicode="false" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="READER_WORKING_PLACE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="READER_BIRTHDAY" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="READER_AGE" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="READER_REGISTRATION" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="READER_PHOTO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ISSUING_LITERATURE" Relationship="Self.FK_ISSUING_LITERATURE_READERS" FromRole="READERS" ToRole="ISSUING_LITERATURE" />
+  </EntityType>
+  <EntityType Name="READING_ROOM">
+    <Key>
+      <PropertyRef Name="READING_ROOM_ID" />
+    </Key>
+    <Property Name="READING_ROOM_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="READING_ROOM_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="READING_ROOM_LIBRARY" Type="Int32" Nullable="false" />
+    <Property Name="READING_ROOM_LITERATURE" Type="Int32" Nullable="false" />
+    <Property Name="READING_ROOM_SEATS" Type="Int32" Nullable="false" />
+    <Property Name="READING_ROOM_WORK_TIME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="READING_ROOM_FLOOR" Type="Int32" />
+    <Property Name="READING_ROOM_WORKERS" Type="Int32" />
+    <NavigationProperty Name="LIBRARIES" Relationship="Self.FK_READING_ROOM_LIBRARIES" FromRole="READING_ROOM" ToRole="LIBRARIES" />
+    <NavigationProperty Name="LITERATURE" Relationship="Self.FK_LITERATURE_READING_ROOM" FromRole="READING_ROOM" ToRole="LITERATURE" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="ISSUING_LITERATURE">
+    <Key>
+      <PropertyRef Name="ISSUING_LITERATURE_READER" />
+      <PropertyRef Name="ISSUING_LITERATURE_LITERATURE" />
+      <PropertyRef Name="ISSUING_LITERATURE_DATE_OF_ISSUE" />
+      <PropertyRef Name="ISSUING_LITERATURE_TYPE_OF_ISSUANCE" />
+    </Key>
+    <Property Name="ISSUING_LITERATURE_READER" Type="Int32" Nullable="false" />
+    <Property Name="ISSUING_LITERATURE_LITERATURE" Type="Int32" Nullable="false" />
+    <Property Name="ISSUING_LITERATURE_DATE_OF_ISSUE" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ISSUING_LITERATURE_ISSUANCE_DATE" Type="DateTime" Precision="0" />
+    <Property Name="ISSUING_LITERATURE_TYPE_OF_ISSUANCE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ISSUING_LITERATURE_DEPOSIT" Type="String" MaxLength="4" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="LITERATURE" Relationship="Self.FK_ISSUING_LITERATURE_LITERATURE" FromRole="ISSUING_LITERATURE" ToRole="LITERATURE" />
+    <NavigationProperty Name="READERS" Relationship="Self.FK_ISSUING_LITERATURE_READERS" FromRole="ISSUING_LITERATURE" ToRole="READERS" />
+  </EntityType>
+  <Association Name="FK_READING_ROOM_LIBRARIES">
+    <End Role="LIBRARIES" Type="Self.LIBRARIES" Multiplicity="1" />
+    <End Role="READING_ROOM" Type="Self.READING_ROOM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LIBRARIES">
+        <PropertyRef Name="LIBRARY_ID" />
+      </Principal>
+      <Dependent Role="READING_ROOM">
+        <PropertyRef Name="READING_ROOM_LIBRARY" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ISSUING_LITERATURE_LITERATURE">
+    <End Role="LITERATURE" Type="Self.LITERATURE" Multiplicity="1" />
+    <End Role="ISSUING_LITERATURE" Type="Self.ISSUING_LITERATURE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LITERATURE">
+        <PropertyRef Name="LITERATURE_ID" />
+      </Principal>
+      <Dependent Role="ISSUING_LITERATURE">
+        <PropertyRef Name="ISSUING_LITERATURE_LITERATURE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LITERATURE_READING_ROOM">
+    <End Role="READING_ROOM" Type="Self.READING_ROOM" Multiplicity="0..1" />
+    <End Role="LITERATURE" Type="Self.LITERATURE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="READING_ROOM">
+        <PropertyRef Name="READING_ROOM_ID" />
+      </Principal>
+      <Dependent Role="LITERATURE">
+        <PropertyRef Name="LITERATURE_READING_ROOM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ISSUING_LITERATURE_READERS">
+    <End Role="READERS" Type="Self.READERS" Multiplicity="1" />
+    <End Role="ISSUING_LITERATURE" Type="Self.ISSUING_LITERATURE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="READERS">
+        <PropertyRef Name="READER_ID" />
+      </Principal>
+      <Dependent Role="ISSUING_LITERATURE">
+        <PropertyRef Name="ISSUING_LITERATURE_READER" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Evdokimov_СityLibrariesEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="LIBRARIES" EntityType="Self.LIBRARIES" />
+    <EntitySet Name="LITERATURE" EntityType="Self.LITERATURE" />
+    <EntitySet Name="READERS" EntityType="Self.READERS" />
+    <EntitySet Name="READING_ROOM" EntityType="Self.READING_ROOM" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="ISSUING_LITERATURE" EntityType="Self.ISSUING_LITERATURE" />
+    <AssociationSet Name="FK_READING_ROOM_LIBRARIES" Association="Self.FK_READING_ROOM_LIBRARIES">
+      <End Role="LIBRARIES" EntitySet="LIBRARIES" />
+      <End Role="READING_ROOM" EntitySet="READING_ROOM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ISSUING_LITERATURE_LITERATURE" Association="Self.FK_ISSUING_LITERATURE_LITERATURE">
+      <End Role="LITERATURE" EntitySet="LITERATURE" />
+      <End Role="ISSUING_LITERATURE" EntitySet="ISSUING_LITERATURE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LITERATURE_READING_ROOM" Association="Self.FK_LITERATURE_READING_ROOM">
+      <End Role="READING_ROOM" EntitySet="READING_ROOM" />
+      <End Role="LITERATURE" EntitySet="LITERATURE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ISSUING_LITERATURE_READERS" Association="Self.FK_ISSUING_LITERATURE_READERS">
+      <End Role="READERS" EntitySet="READERS" />
+      <End Role="ISSUING_LITERATURE" EntitySet="ISSUING_LITERATURE" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

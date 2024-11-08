@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище СityLibrariesModelContainer" CdmEntityContainer="Evdokimov_СityLibrariesEntities">
+    <EntitySetMapping Name="LIBRARIES">
+      <EntityTypeMapping TypeName="СityLibrariesModel.LIBRARIES">
+        <MappingFragment StoreEntitySet="LIBRARIES">
+          <ScalarProperty Name="LIBRARY_ID" ColumnName="LIBRARY_ID" />
+          <ScalarProperty Name="LIBRARY_NAME" ColumnName="LIBRARY_NAME" />
+          <ScalarProperty Name="LIBRARY_ADDRESS" ColumnName="LIBRARY_ADDRESS" />
+          <ScalarProperty Name="LIBRARY_CITY" ColumnName="LIBRARY_CITY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LITERATURE">
+      <EntityTypeMapping TypeName="СityLibrariesModel.LITERATURE">
+        <MappingFragment StoreEntitySet="LITERATURE">
+          <ScalarProperty Name="LITERATURE_ID" ColumnName="LITERATURE_ID" />
+          <ScalarProperty Name="LITERATURE_NAME" ColumnName="LITERATURE_NAME" />
+          <ScalarProperty Name="LITERATURE_CATEGORY" ColumnName="LITERATURE_CATEGORY" />
+          <ScalarProperty Name="LITERATURE_AUTHOR" ColumnName="LITERATURE_AUTHOR" />
+          <ScalarProperty Name="LITERATURE_PUBLISHER" ColumnName="LITERATURE_PUBLISHER" />
+          <ScalarProperty Name="LITERATURE_PUBLISHING_DATE" ColumnName="LITERATURE_PUBLISHING_DATE" />
+          <ScalarProperty Name="LITERATURE_PAGES" ColumnName="LITERATURE_PAGES" />
+          <ScalarProperty Name="LITERATURE_READING_ROOM" ColumnName="LITERATURE_READING_ROOM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="READERS">
+      <EntityTypeMapping TypeName="СityLibrariesModel.READERS">
+        <MappingFragment StoreEntitySet="READERS">
+          <ScalarProperty Name="READER_ID" ColumnName="READER_ID" />
+          <ScalarProperty Name="READER_SURNAME" ColumnName="READER_SURNAME" />
+          <ScalarProperty Name="READER_NAME" ColumnName="READER_NAME" />
+          <ScalarProperty Name="READER_PATRONYMIC" ColumnName="READER_PATRONYMIC" />
+          <ScalarProperty Name="READER_CATEGORY" ColumnName="READER_CATEGORY" />
+          <ScalarProperty Name="READER_WORKING_PLACE" ColumnName="READER_WORKING_PLACE" />
+          <ScalarProperty Name="READER_BIRTHDAY" ColumnName="READER_BIRTHDAY" />
+          <ScalarProperty Name="READER_AGE" ColumnName="READER_AGE" />
+          <ScalarProperty Name="READER_REGISTRATION" ColumnName="READER_REGISTRATION" />
+          <ScalarProperty Name="READER_PHOTO" ColumnName="READER_PHOTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="READING_ROOM">
+      <EntityTypeMapping TypeName="СityLibrariesModel.READING_ROOM">
+        <MappingFragment StoreEntitySet="READING_ROOM">
+          <ScalarProperty Name="READING_ROOM_ID" ColumnName="READING_ROOM_ID" />
+          <ScalarProperty Name="READING_ROOM_NAME" ColumnName="READING_ROOM_NAME" />
+          <ScalarProperty Name="READING_ROOM_LIBRARY" ColumnName="READING_ROOM_LIBRARY" />
+          <ScalarProperty Name="READING_ROOM_LITERATURE" ColumnName="READING_ROOM_LITERATURE" />
+          <ScalarProperty Name="READING_ROOM_SEATS" ColumnName="READING_ROOM_SEATS" />
+          <ScalarProperty Name="READING_ROOM_WORK_TIME" ColumnName="READING_ROOM_WORK_TIME" />
+          <ScalarProperty Name="READING_ROOM_FLOOR" ColumnName="READING_ROOM_FLOOR" />
+          <ScalarProperty Name="READING_ROOM_WORKERS" ColumnName="READING_ROOM_WORKERS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="СityLibrariesModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ISSUING_LITERATURE">
+      <EntityTypeMapping TypeName="СityLibrariesModel.ISSUING_LITERATURE">
+        <MappingFragment StoreEntitySet="ISSUING_LITERATURE">
+          <ScalarProperty Name="ISSUING_LITERATURE_READER" ColumnName="ISSUING_LITERATURE_READER" />
+          <ScalarProperty Name="ISSUING_LITERATURE_LITERATURE" ColumnName="ISSUING_LITERATURE_LITERATURE" />
+          <ScalarProperty Name="ISSUING_LITERATURE_DATE_OF_ISSUE" ColumnName="ISSUING_LITERATURE_DATE_OF_ISSUE" />
+          <ScalarProperty Name="ISSUING_LITERATURE_ISSUANCE_DATE" ColumnName="ISSUING_LITERATURE_ISSUANCE_DATE" />
+          <ScalarProperty Name="ISSUING_LITERATURE_TYPE_OF_ISSUANCE" ColumnName="ISSUING_LITERATURE_TYPE_OF_ISSUANCE" />
+          <ScalarProperty Name="ISSUING_LITERATURE_DEPOSIT" ColumnName="ISSUING_LITERATURE_DEPOSIT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

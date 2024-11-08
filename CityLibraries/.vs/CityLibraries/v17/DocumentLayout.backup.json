@@ -1,0 +1,136 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\study\\7 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430\\CityLibraries\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9AABD299-6129-4162-86EF-A74EEBC2C225}|CityLibraries.csproj|d:\\study\\7 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430\\citylibraries\\readerspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9AABD299-6129-4162-86EF-A74EEBC2C225}|CityLibraries.csproj|solutionrelative:readerspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AABD299-6129-4162-86EF-A74EEBC2C225}|CityLibraries.csproj|D:\\study\\7 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430\\CityLibraries\\readerspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AABD299-6129-4162-86EF-A74EEBC2C225}|CityLibraries.csproj|solutionrelative:readerspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AABD299-6129-4162-86EF-A74EEBC2C225}|CityLibraries.csproj|D:\\study\\7 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430\\CityLibraries\\evdokimovmodel.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AABD299-6129-4162-86EF-A74EEBC2C225}|CityLibraries.csproj|solutionrelative:evdokimovmodel.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AABD299-6129-4162-86EF-A74EEBC2C225}|CityLibraries.csproj|D:\\study\\7 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430\\CityLibraries\\issuing_literature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AABD299-6129-4162-86EF-A74EEBC2C225}|CityLibraries.csproj|solutionrelative:issuing_literature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AABD299-6129-4162-86EF-A74EEBC2C225}|CityLibraries.csproj|D:\\study\\7 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430\\CityLibraries\\readers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AABD299-6129-4162-86EF-A74EEBC2C225}|CityLibraries.csproj|solutionrelative:readers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AABD299-6129-4162-86EF-A74EEBC2C225}|CityLibraries.csproj|D:\\study\\7 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430\\CityLibraries\\addeditpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{9AABD299-6129-4162-86EF-A74EEBC2C225}|CityLibraries.csproj|solutionrelative:addeditpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AABD299-6129-4162-86EF-A74EEBC2C225}|CityLibraries.csproj|D:\\study\\7 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430\\CityLibraries\\addeditpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AABD299-6129-4162-86EF-A74EEBC2C225}|CityLibraries.csproj|solutionrelative:addeditpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ISSUING_LITERATURE.cs",
+              "DocumentMoniker": "D:\\study\\7 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430\\CityLibraries\\ISSUING_LITERATURE.cs",
+              "RelativeDocumentMoniker": "ISSUING_LITERATURE.cs",
+              "ToolTip": "D:\\study\\7 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430\\CityLibraries\\ISSUING_LITERATURE.cs",
+              "RelativeToolTip": "ISSUING_LITERATURE.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T17:59:42.354Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "READERS.cs",
+              "DocumentMoniker": "D:\\study\\7 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430\\CityLibraries\\READERS.cs",
+              "RelativeDocumentMoniker": "READERS.cs",
+              "ToolTip": "D:\\study\\7 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430\\CityLibraries\\READERS.cs",
+              "RelativeToolTip": "READERS.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAwwCAAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T17:58:14.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EvdokimovModel.Context.cs",
+              "DocumentMoniker": "D:\\study\\7 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430\\CityLibraries\\EvdokimovModel.Context.cs",
+              "RelativeDocumentMoniker": "EvdokimovModel.Context.cs",
+              "ToolTip": "D:\\study\\7 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430\\CityLibraries\\EvdokimovModel.Context.cs",
+              "RelativeToolTip": "EvdokimovModel.Context.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T17:57:57.904Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ReadersPage.xaml",
+              "DocumentMoniker": "D:\\study\\7 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430\\CityLibraries\\ReadersPage.xaml",
+              "RelativeDocumentMoniker": "ReadersPage.xaml",
+              "ToolTip": "D:\\study\\7 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430\\CityLibraries\\ReadersPage.xaml",
+              "RelativeToolTip": "ReadersPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-07T15:11:59.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ReadersPage.xaml.cs",
+              "DocumentMoniker": "D:\\study\\7 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430\\CityLibraries\\ReadersPage.xaml.cs",
+              "RelativeDocumentMoniker": "ReadersPage.xaml.cs",
+              "ToolTip": "D:\\study\\7 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430\\CityLibraries\\ReadersPage.xaml.cs",
+              "RelativeToolTip": "ReadersPage.xaml.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAlwHUAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T15:11:28.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AddEditPage.xaml.cs",
+              "DocumentMoniker": "D:\\study\\7 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430\\CityLibraries\\AddEditPage.xaml.cs",
+              "RelativeDocumentMoniker": "AddEditPage.xaml.cs",
+              "ToolTip": "D:\\study\\7 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430\\CityLibraries\\AddEditPage.xaml.cs",
+              "RelativeToolTip": "AddEditPage.xaml.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAuwEwAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T15:08:47.801Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AddEditPage.xaml",
+              "DocumentMoniker": "D:\\study\\7 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430\\CityLibraries\\AddEditPage.xaml",
+              "RelativeDocumentMoniker": "AddEditPage.xaml",
+              "ToolTip": "D:\\study\\7 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043C\u043E\u0434\u0443\u043B\u0435\u0439\\\u041A\u0443\u0440\u0441\u043E\u0432\u0430\u044F \u0440\u0430\u0431\u043E\u0442\u0430\\CityLibraries\\AddEditPage.xaml",
+              "RelativeToolTip": "AddEditPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-07T15:08:46.178Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
