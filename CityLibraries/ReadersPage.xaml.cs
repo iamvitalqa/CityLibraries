@@ -25,16 +25,13 @@ namespace CityLibraries
             InitializeComponent();
             var currentReaders = Evdokimov_СityLibrariesEntities.GetContext().READERS.ToList();
             ReadersListView.ItemsSource = currentReaders;
-            filterCBox.SelectedIndex = 0;
-            rbuttonUp.IsChecked = true;
+            filterCBox.SelectedIndex = 0; 
         }
-
-
         private void UpdateReaders()
         {
             var currentReaders = Evdokimov_СityLibrariesEntities.GetContext().READERS.ToList();
-            currentReaders = currentReaders.Where(p => (p.READER_SURNAME.ToLower().Contains(searchTBox.Text.ToLower()) || (p.READER_NAME.ToLower().Contains(searchTBox.Text.ToLower()) || (p.READER_PATRONYMIC != null && p.READER_PATRONYMIC.ToLower().Contains(searchTBox.Text.ToLower()))))).ToList();
             int readersCount = currentReaders.Count;
+            currentReaders = currentReaders.Where(p => (p.READER_SURNAME.ToLower().Contains(searchTBox.Text.ToLower()) || (p.READER_NAME.ToLower().Contains(searchTBox.Text.ToLower()) || (p.READER_PATRONYMIC != null && p.READER_PATRONYMIC.ToLower().Contains(searchTBox.Text.ToLower()))))).ToList();
             if (rbuttonDown.IsChecked.Value)
             {
                 currentReaders = currentReaders.OrderByDescending(p => p.READER_AGE).ToList();
@@ -43,8 +40,6 @@ namespace CityLibraries
             {
                 currentReaders = currentReaders.OrderBy(p => p.READER_AGE).ToList();
             }
-
-
             if (filterCBox.SelectedIndex == 0)
             {
                 currentReaders = currentReaders.Where(p => (p.READER_AGE >= 1 && p.READER_AGE <= 100)).ToList();
@@ -61,57 +56,43 @@ namespace CityLibraries
             {
                 currentReaders = currentReaders.Where(p => (p.READER_AGE >= 1 && p.READER_AGE <= 6)).ToList();
             }
-
             TBCount.Text = currentReaders.Count.ToString();
             TBALLRecords.Text = readersCount.ToString();
-
             ReadersListView.ItemsSource = currentReaders;
-
         }
-
-
-
         private void EditButton_Click(object sender, RoutedEventArgs e)
         {
             Manager.MainFrame.Navigate(new AddEditPage((sender as Button).DataContext as READERS));
         }
-
         private void addButton_Click(object sender, RoutedEventArgs e)
         {
             Manager.MainFrame.Navigate(new AddEditPage(null));
         }
-
         private void searchTBox_SelectionChanged(object sender, RoutedEventArgs e)
         {
             UpdateReaders();
         }
-
         private void filterCBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             UpdateReaders();
         }
-
         private void rbuttonUp_Checked(object sender, RoutedEventArgs e)
         {
             UpdateReaders();
         }
-
         private void rbuttonDown_Checked(object sender, RoutedEventArgs e)
         {
             UpdateReaders();
         }
-
         private void deleteButton_Click(object sender, RoutedEventArgs e)
         {
             var currentAgent = (sender as Button).DataContext as READERS;
             var currentAgentDefence = Evdokimov_СityLibrariesEntities.GetContext().ISSUING_LITERATURE.ToList();
-
             currentAgentDefence = currentAgentDefence.Where(p => p.ISSUING_LITERATURE_READER == currentAgent.READER_ID ).ToList();
             if (currentAgentDefence.Count != 0)
                 MessageBox.Show("Невозможно выполнить удаление, т.к. читателю выдана книга");
             else
             {
-
                 if (MessageBox.Show("Вы точно хотите выполнить удаление?", "Внимание!", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
                 {
                     try
@@ -123,11 +104,9 @@ namespace CityLibraries
                     {
                         MessageBox.Show(ex.Message.ToString());
                     }
-                }
-                    
+                }  
             }
         }
-
         private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
             if (Visibility == Visibility.Visible)

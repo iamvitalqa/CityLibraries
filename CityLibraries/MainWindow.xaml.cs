@@ -26,10 +26,5 @@ namespace CityLibraries
             MainFrame.Navigate(new ReadersPage());
             Manager.MainFrame = MainFrame;
         }
-
-        private void MainFrame_ContentRendered(object sender, EventArgs e)
-        {
-
-        }
     }
 }

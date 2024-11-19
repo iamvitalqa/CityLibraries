@@ -7,36 +7,26 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ReadersPage" FontFamily="Comic Sans MS" IsVisibleChanged="Page_IsVisibleChanged">
-
     <Grid>
-
-
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
-
         <StackPanel Grid.Row="2"  Orientation="Horizontal" Margin="5" HorizontalAlignment="Right">
             <TextBlock Text="Количество записей: " FontSize="15"></TextBlock>
             <TextBlock Name="TBCount" FontSize="15"></TextBlock>
             <TextBlock Text=" из " FontSize="15"></TextBlock>
             <TextBlock Name="TBALLRecords" FontSize="15" ></TextBlock>
-
         </StackPanel>
-
-
-
         <StackPanel Grid.Row="0" Orientation="Horizontal">
             <TextBlock Text="Поиск: " FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" ></TextBlock>
             <TextBox Name="searchTBox" SelectionChanged="searchTBox_SelectionChanged"  ></TextBox>
         </StackPanel>
-
         <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="290,0,0,0">
             <RadioButton GroupName="ageRButton" Content="Возраст в порядке увеличения" Name="rbuttonUp" Checked="rbuttonUp_Checked" FontSize="15" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" ></RadioButton>
             <RadioButton GroupName="ageRButton" Content="Возраст в порядке уменьшения" Name="rbuttonDown" Checked="rbuttonDown_Checked" FontSize="15" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"  ></RadioButton>
         </StackPanel>
-
         <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,210,0">
             <TextBlock Text="Сортировка по категории:" HorizontalAlignment="Left" FontSize="15"/>
             <ComboBox Name="filterCBox" SelectionChanged="filterCBox_SelectionChanged"
@@ -45,15 +35,9 @@
                 <TextBlock Text="Взрослый" FontSize="15" />
                 <TextBlock Text="Школьник" FontSize="15" />
                 <TextBlock Text="Дошкольный возраст" FontSize="15" />
-
             </ComboBox>
         </StackPanel>
-
         <Button Grid.Row="0" Content="Добавить читателя" HorizontalAlignment="Right" Name="addButton" Click="addButton_Click" ></Button>
-        
-        
-        
-        
         <ListView Name="ReadersListView" Grid.Row="1" >
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -70,7 +54,6 @@
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
-
                         <Image Width="170" Grid.Column="0" Grid.RowSpan="5" Stretch="UniformToFill" HorizontalAlignment="Center">
                             <Image.Source>
                                 <Binding Path="READER_PHOTO">
@@ -84,44 +67,31 @@
                         </Image>
                         <StackPanel   Orientation="Horizontal" Grid.Column="1" Grid.Row="0">
                             <TextBlock Text="Читатель: " Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" FontSize="20" ></TextBlock>
-
                             <TextBlock Text="{Binding READER_SURNAME}" Grid.Column="1" Grid.Row="0" HorizontalAlignment="left" FontSize="20"></TextBlock>
                             <TextBlock Text=" " Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" FontSize="20" ></TextBlock>
                             <TextBlock Text="{Binding READER_NAME}" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" FontSize="20" ></TextBlock>
                             <TextBlock Text=" " Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" FontSize="20" ></TextBlock>
                             <TextBlock Text="{Binding READER_PATRONYMIC}" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Right" FontSize="20" ></TextBlock>
                         </StackPanel>
-
                         <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1">
                             <TextBlock Text="Возраст: " Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" FontSize="20" TextWrapping="Wrap"></TextBlock>
                             <TextBlock Text="{Binding READER_AGE}" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" FontSize="20" ></TextBlock>
                         </StackPanel>
-
                         <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="2">
                             <TextBlock Text="Место учебы/работы: " Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" FontSize="20" TextWrapping="Wrap"></TextBlock>
-
                             <TextBlock Text="{Binding READER_WORKING_PLACE}" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" FontSize="20"></TextBlock>
                         </StackPanel>
-
                         <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="3">
                             <TextBlock Text="Категория: " Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" FontSize="20" TextWrapping="Wrap"></TextBlock>
-
                             <TextBlock Text="{Binding READER_CATEGORY}" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" FontSize="20"></TextBlock>
                         </StackPanel>
-
-
-
-
                         <StackPanel Grid.Column="1" Grid.Row="4" Orientation="Horizontal">
                             <Button Content="Редактировать" Name="EditButton" Click="EditButton_Click" Margin="2"></Button>
-                            <Button Content="Удалить" Name="deleteButton" Click="deleteButton_Click" Margin="2" Opacity="{Binding READER_ID}" ></Button>
+                            <Button Content="Удалить" Name="deleteButton" Click="deleteButton_Click" Margin="2" ></Button>
                         </StackPanel>
-
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-
-
     </Grid>
 </Page>

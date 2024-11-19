@@ -25,19 +25,13 @@ namespace CityLibraries
         public AddEditPage(READERS SelectedREADERS)
         {
             InitializeComponent();
-
-
             if (SelectedREADERS != null)
             {
                 currentREADERS = SelectedREADERS;
                
             }
-
             DataContext = currentREADERS;
-
-
         }
-
         private void ChangePictureBtn_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog myOpenFileDialog = new OpenFileDialog();
@@ -47,12 +41,10 @@ namespace CityLibraries
                 LogoImage.Source = new BitmapImage(new Uri(myOpenFileDialog.FileName));
             }
         }
-
         private void backButton_Click(object sender, RoutedEventArgs e)
         {
             Manager.MainFrame.GoBack();
         }
-
         private void saveButton_Click(object sender, RoutedEventArgs e)
         {
             StringBuilder errors = new StringBuilder();
@@ -71,7 +63,6 @@ namespace CityLibraries
                 MessageBox.Show(errors.ToString());
                 return;
             }
-
             if (currentREADERS.READER_ID == 0)
             {
                Evdokimov_СityLibrariesEntities.GetContext().READERS.Add(currentREADERS);
@@ -86,9 +77,6 @@ namespace CityLibraries
             {
                 MessageBox.Show(ex.Message.ToString());
             }
-
-
-
         }
     }
 }
